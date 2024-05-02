@@ -28,4 +28,25 @@ public class Movie
     [Display(Name ="Ano de Estréia")]
     [Required(ErrorMessage = "Por favor, informe o ano de estreia")]    
     public Int16 MovieYear { get; set; }
+
+    [Display(Name = "Duração (em minutos)")]
+    [Required(ErrorMessage = "por favor, informe a duração")]
+    public Int16 Duration { get; set; }
+
+    [Display(Name = "classificação Etária")]
+    [Required(ErrorMessage = "por favor, informe a classificação etária")]
+    public byte AgeRating { get; set; } = 0;
+
+    [StringLength(200)]
+    [Display(Name = "Foto")]
+    public string Image { get; set; }
+
+
+    //H - hora; -hora com digitos; m - minutos; s
+    //d - dia; M - mêa; yyyy - ano
+    [NotMapped]
+    [Display(Name = "Duração")]
+    public string HourDuration { get {
+        return TimeSpan.FromMinutes(Duration).ToString(@"%h'h 'm'min'");
+    } }
 }
