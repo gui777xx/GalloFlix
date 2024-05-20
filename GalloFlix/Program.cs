@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-string conn = builder.Configuration.GetConnectionString("GalloFlixConnection");
+string conn = builder.Configuration.GetConnectionString("GalloflixConnection");
 var version = ServerVersion.AutoDetect(conn);
 builder.Services.AddDbContext<AppDbContext>(
     Opt => Opt.UseMySql(conn, version)
