@@ -1,9 +1,9 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using GAlloFlix.Models;
+using GalloFlix.Models;
 using GalloFlix.Data;
 
-namespace GAlloFlix.Controllers;
+namespace GalloFlix.Controllers;
 
 public class HomeController : Controller
 {

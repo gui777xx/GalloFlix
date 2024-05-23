@@ -1,4 +1,4 @@
-namespace GAlloFlix.Models;
+namespace GalloFlix.Models;
 
 public class ErrorViewModel
 {
